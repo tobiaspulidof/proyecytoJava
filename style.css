@@ -1,0 +1,507 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    background-color: black;
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: smaller;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* NAV */
+
+header {
+    width: 90%;
+    height: 80px;
+}
+
+h1{
+    color: orangered;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 5%;
+}
+
+.nav-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+header .lista-de-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 9px;
+    margin-top: 15px;
+}
+
+.lista-de-nav li a{
+    margin: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.lista-de-nav li a:hover{
+    color: black;
+    padding: 5px;
+    background-color: orangered;
+    border-radius: 5px;
+}
+
+/* FIN NAV */
+
+/* GRID */
+
+.contenedor-peliculas{
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    padding: 20px;
+    grid-gap: 15px;
+}
+.img-peli{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-peli:hover{
+    border: solid 5px orangered;
+    transform: scale(1.15);
+    transition: 0.5s ease-out;
+}
+
+.grid-peli:nth-child(6){
+    grid-row-start: span 4;
+}
+
+.grid-peli:nth-child(2){
+    grid-row-start: span 4;
+}
+
+.grid-peli:nth-child(4){
+    grid-row-start: span 3;
+}
+
+.grid-peli:nth-child(9){
+    grid-row-start: span 4;
+}
+
+.grid-peli:nth-child(8){
+    grid-row-start: span 4;
+}
+
+.grid-peli:nth-child(7){
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.grid-peli:nth-child(10){
+    grid-row-start: span 4;
+}
+
+/*FIN GRID*/
+
+
+
+
+
+
+/* BOOSTRAP */ 
+
+.slide{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    background-color: black;
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+}
+
+.slide img{
+    object-fit: cover;
+    height: 70vh;
+} 
+
+/* FIN BOOSTRAP */
+
+/* PAY */
+
+.formulario{
+    width: 80%;
+    background-color: orangered;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.titulo-form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    background-color: black;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.texto{
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+}
+
+#user-name{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    padding: 10px;
+    border: solid black 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#user-password{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    padding: 10px;
+    border: solid black 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#enviado{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#inicio-sesion{
+    background-color: black;
+    border-radius: 5px;
+    width: 30%; 
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: none;
+}
+
+#ya-iniciado{
+    display: none;
+}
+
+#seleccionador-pelicula{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    padding: 10px;
+    border: solid black 5px;
+    margin: 0 auto;
+}
+
+#imagen-pelicula{
+    display: none;
+    margin: 0 auto;
+    height: 700px;
+    padding: 2px;
+    width: 500px;
+    border: solid black 10px;
+}
+
+#seleccionador-cantidad{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    padding: 10px;
+    border: solid black 5px;
+    margin: 0 auto;
+}
+
+.seleccionador-precio{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    padding: 10px;
+    border: solid black 5px;
+    margin: 0 auto;
+}
+
+#boton-comprar{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#oculto{
+    background-color: black;
+    border-radius: 5px;
+    width: 30%; 
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: none;
+}
+
+#oculto-cancel{
+    background-color: black;
+    border-radius: 5px;
+    width: 30%; 
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: none;
+}
+
+#boton-cancelar{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#boton-cancelaro{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.text-compras{
+    margin: 0 auto;
+    color: white;
+}
+
+/* PAY */
+
+/* COMPRAR */
+
+.card-product{
+    margin: 1rem;
+    width: 10rem;
+    height: 13rem;
+    border-radius: 15px;
+    border: groove #3e6882 2px;
+    background-color: #98a2a8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.img-movie{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    height: 50%;
+}
+
+.nombre-movie{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: orangered;
+}
+
+.precio-movie{
+    background-color: white;
+}
+
+/*CARTAA ///*/
+
+.container{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.container form{
+    background: orangered;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color: black;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background-color: #444;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, black, grey);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, black, grey);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+.toaster{
+    background-color:lightslategray;
+}
+
+.btnToast{
+    padding: 15px;
+    font-size:larger;
+    border-radius: 5px;
+}
+
+/* CARTAAAAA */ 
