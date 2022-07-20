@@ -1,0 +1,80 @@
+[
+    {
+        "id" : 1,
+        "nombre" : "Spiderman No Way Home",
+        "precio" : 1500,
+        "image":"/IMAGES/spiderman22.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    },  
+    {
+        "id" : 2,
+        "nombre" : "Avengers: Endgame",
+        "precio" : 1500,
+        "imagen" : "/IMAGES/avengersendgame.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Avengers:_Endgame"
+    },
+    {
+        "id" : 3,
+        "nombre" : "Toy Story 4",
+        "precio" : 1300,
+        "image":"/IMAGES/toystory4.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    }, 
+    {
+        "id" : 4,
+        "nombre" : "Interestelar",
+        "precio" : 1200,
+        "imagen" : "/IMAGES/interestellar.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    },
+    {
+        "id" : 5,
+        "nombre" : "Venom",
+        "precio" : 1100,
+        "image":"/IMAGES/venom.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    },
+    {
+        "id" : 6,
+        "nombre" : "Back To The Future",
+        "precio" : 1300,
+        "image":"/IMAGES/volver al futuro.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    },
+    {
+        "id" : 7,
+        "nombre" : "Ready Player One",
+        "precio" : 1400,
+        "image":"/IMAGES/ready.player.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    },
+    {
+        "id" : 8,
+        "nombre" : "Spiderman 3",
+        "precio" : 1550,
+        "image":"/IMAGES/spiderman3.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    },
+    {
+        "id" : 9,
+        "nombre" : "Cars",
+        "precio" : 1100,
+        "image":"/IMAGES/cars3.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    },
+    {
+        "id" : 10,
+        "nombre" : "Harry Potter Part 2",
+        "precio" : 1500,
+        "image":"/IMAGES/harrypotter.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    },
+    {
+        "id" : 11,
+        "nombre" : "The Amazing Spiderman",
+        "precio" : 1500,
+        "image":"/IMAGES/theamazingspiderman.jpg",
+        "info" : "https://es.wikipedia.org/wiki/Interstellar"
+    }
+
+]

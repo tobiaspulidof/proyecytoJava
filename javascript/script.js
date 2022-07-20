@@ -2,21 +2,6 @@
 
 // LISTA DE PRODUCTOS
 
-const peliculas = [
-    { id:1, nombre:"Spiderman No Way Home", precio: 1500, duracion: 160, image:'/IMAGES/spiderman22.jpg'},
-    { id:2, nombre:"Avengers Endgame", precio: 1500, duracion: 180, image:'/IMAGES/avengersendgame.jpg' },
-    { id:3, nombre:"Toy Story 4", precio: 1300, duracion: 130, image:'/IMAGES/toystory4.jpg'},
-    { id:4, nombre:"Interestellar", precio: 1200, duracion: 150, image:'/IMAGES/interestellar.jpg'},
-    { id:5, nombre:"Venom", precio: 1100, duracion: 130, image:'/IMAGES/venom.jpg'},
-    { id:6, nombre:"Back To The Future", precio: 1300, duracion: 140, image:'/IMAGES/volver al futuro.jpg'},
-    { id:7, nombre:"Ready Player One", precio: 1400, duracion: 150, image:'/IMAGES/ready.player.jpg'},
-    { id:8, nombre:"Spiderman 3", precio: 1550, duracion: 140, image:'/IMAGES/spiderman3.jpg'},
-    { id:9, nombre:"Cars", precio: 1100, duracion: 120, image:'/IMAGES/cars3.jpg'},
-    {id:10, nombre:"Harry Potter Part 2", precio: 1500, duracion: 150, image:'/IMAGES/harrypotter.jpg'},
-    {id:11, nombre:"The Amazing Spiderman", precio: 1500, duracion: 140, image:'/IMAGES/theamazingspiderman.jpg'}
-]
-
-
 
 // LISTA DE PELICULAS FUNCIONA
 
@@ -210,157 +195,21 @@ btnEnviar.addEventListener('click',()=>{
 })
     
 
-const optionsSpiderNoWayHome = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
 
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=spiderman%20no%20way%20home', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-////
+// FUNCION QUE HACE EL FETCH Y TE DEVUELVE LA INFO
+const traerPelis = async () => {
+    let response = await fetch("info.json")
+    let result = await response.json()
+    return result
+}
 
 
-const optionsAvengers = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-            'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-        }
-    };
-    
-    fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=avengers%20endgame', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-///
+const bodyPelis = document.getElementById("contenedorPeliculas")
 
-const optionsToyStory = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
 
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=toy%20story%204', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+// FUNCIÓN QUE GENERA EL HTML CON LA INFO OBTENIDA DEL FETCH
+selectMovie = async() =>{
+     await traerPelis()
+}
 
-///
-
-const optionsInterestellar = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
-
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=Interestellar', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-///
-const optionsVenom = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
-
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=Venom', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-///
-const optionsBackToTheFuture = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
-
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=Volver%20al%20futuro', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-///
-const optionsReadyPlayerOne = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
-
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=Ready%20Player%20one', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-///
-const optionsSpiderman3 = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
-
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=Spiderman%203', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-///
-const optionsCars3 = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
-
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=cars%203', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-///
-const optionsHarryPotter = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
-
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=Harry%20Potter%20and%20the%20Deathly%20Hallows%3A%20Part%202', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-///
-const optionsTheAmazingSpiderman = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c57b71d805mshc8fa68c4b9fd34ep11608bjsna3f3f15e6b4d',
-		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-	}
-};
-
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=the%20amazing%20spiderman', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+console.log(selectMovie)
