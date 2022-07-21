@@ -1,24 +1,31 @@
 
 
 // LISTA DE PRODUCTOS
+// FUNCION QUE HACE EL FETCH Y TE DEVUELVE LA INFO
+const traerPelis = async () => {
+    let response = await fetch("info.json")
+    let result = await response.json()
+    return result
+}
+
 
 
 // LISTA DE PELICULAS FUNCIONA
 
 const selectMovie = document.getElementById('seleccionador-pelicula');
-window.addEventListener('load', listSelect);
 
-function listSelect() {
-    peliculas.map( pelicula =>{
+
+async function listSelect(){
+    let selector =await traerPelis()
+    selector.forEach(pelicula => {
         let option = document.createElement('option');
-        option.value = (pelicula.nombre);
-        option.textContent = (pelicula.nombre);
+        option.value = (pelicula.nombre) += (pelicula.precio)
+        option.textContent = (pelicula.nombre) 
         selectMovie.appendChild(option);
     });
 }
 
-
-
+window.addEventListener('load', listSelect);
 
 // COMPRA TICKET  / CANCELA TICKET
 
@@ -45,8 +52,10 @@ function comprarTicket() {
                 icon: 'success',
                 text: 'Enviaremos sus entradas a su email'
             })
+            
         }
     })
+
 }
 
 function cancelarTicket() {
@@ -196,20 +205,3 @@ btnEnviar.addEventListener('click',()=>{
     
 
 
-// FUNCION QUE HACE EL FETCH Y TE DEVUELVE LA INFO
-const traerPelis = async () => {
-    let response = await fetch("info.json")
-    let result = await response.json()
-    return result
-}
-
-
-const bodyPelis = document.getElementById("contenedorPeliculas")
-
-
-// FUNCIÓN QUE GENERA EL HTML CON LA INFO OBTENIDA DEL FETCH
-selectMovie = async() =>{
-     await traerPelis()
-}
-
-console.log(selectMovie)
